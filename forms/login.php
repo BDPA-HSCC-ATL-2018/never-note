@@ -48,5 +48,5 @@ if (password_verify("hash", '$2y$10$t3QqJcppy62o3WJDAEzcbOBuecRfAdAx.sNCUk1jrEMZ
 </center>
 </div>
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . "/noteapp/tpl/app-footer.php";
+include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app_footer.php";
 ?>
