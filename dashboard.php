@@ -1,7 +1,8 @@
 <?php
 $page_title = "Dashboard";
-include_once $_SERVER['DOCUMENT_ROOT'] . "/noteapp/tpl/app_header.php";
-include_once $_SERVER['DOCUMENT_ROOT'] . "/noteapp/tpl/app_nav.php";
+include_once $_SERVER['DOCUMENT_ROOT'] . "/noteapp/tpl/app-header.php";
+include_once $_SERVER['DOCUMENT_ROOT'] . "/noteapp/tpl/app-nav.php";
+$user_id = $_SESSION['user_id'];
 ?>
 
 <!--TODO Create controller for search.-->
@@ -35,56 +36,56 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/noteapp/tpl/app_nav.php";
   <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
     <br>
     <?php
-    $sql = <<<SQL
-    SELECT note_title, note_content FROM notes WHERE user_id=1
-    SQL;
+      $sql = <<<SQL
+        SELECT note_title, note_content FROM notes WHERE user_id=$user_id
+SQL;
 
-    $result = $conn->query($sql);
+      $result = $conn->query($sql);
 
-    while ($row = mysqli_fetch_array($result)) {
-      foreach($row as $key => $var) {
-        $$key = $var;
+      while ($row = mysqli_fetch_array($result)) {
+        foreach($row as $key => $var) {
+          $$key = $var;
+        }
+        echo "$note_title - $note_content <br>";
       }
-      echo "$note_title - $note_content <br>";
-    }
     ?>
   </div>
 
   <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
     <?php
-    $cat_sql = <<<SQL
-    SELECT category_name FROM categories WHERE user_id=1
-    SQL;
+      $cat_sql = <<<SQL
+        SELECT category_name FROM categories WHERE user_id=$user_id
+SQL;
 
-    $cat_result = $conn->query($cat_sql);
-    $cat_array = array();
-    $echo = true;
+      $cat_result = $conn->query($cat_sql);
+      $cat_array = array();
+      $echo = true;
 
-    while ($cat_row = $cat_result->fetch_assoc()) {
-      $cat_name = $cat_row['category_name'];
-      foreach ($cat_array as $value) {
-        if (1 == 1) {
-          //The category is a duplicate. Don't echo the value.
-          $echo = false;
-        } else {
-          // $echo = true;
-          array_push($cat_array, $cat_name);
-          echo "$cat_name is not equal to $value.";
+      while ($cat_row = $cat_result->fetch_assoc()) {
+        $cat_name = $cat_row['category_name'];
+        foreach ($cat_array as $value) {
+          if (1 == 1) {
+            //The category is a duplicate. Don't echo the value.
+            $echo = false;
+          } else {
+            // $echo = true;
+            array_push($cat_array, $cat_name);
+            echo "$cat_name is not equal to $value.";
+          }
+        } //foreach
+        if ($echo) {
+          echo "<a href='dashboard.php?cat=$cat_name'>$cat_name</a> <br>";
         }
-      } //foreach
-      if ($echo) {
-        echo "<a href='dashboard.php?cat=$cat_name'>$cat_name</a> <br>";
-      }
-    } //while
+      } //while
 
-    ?>
+      ?>
   </div>
 </div>
 
 <script>
-$(function () {
-  $('#myTab li:last-child a').tab('show')
-})
+  $(function () {
+    $('#myTab li:last-child a').tab('show')
+  })
 </script>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/noteapp/tpl/app_footer.php";?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/noteapp/tpl/app-footer.php";?>
