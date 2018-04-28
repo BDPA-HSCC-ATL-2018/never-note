@@ -21,7 +21,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app_nav.php";
               <div class="col-md-4">
                 <input type="email" class="form-control" id="email" name="email" placeholder="Email" required/>
                 <div class="invalid-feedback">Dude, you need a First Name </div>
-              </div>
+              </div> 
             </div>
 
             <div class="mx-auto">

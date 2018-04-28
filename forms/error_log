@@ -3,3 +3,4 @@
 [28-Apr-2018 16:48:23 Europe/Berlin] PHP Notice:  Undefined variable: page_title in C:\xampp\htdocs\web-assets\tpl\app_header.php on line 17
 [28-Apr-2018 16:48:28 Europe/Berlin] PHP Notice:  Undefined variable: page_title in C:\xampp\htdocs\web-assets\tpl\app_header.php on line 17
 [28-Apr-2018 16:48:57 Europe/Berlin] PHP Notice:  Undefined variable: page_title in C:\xampp\htdocs\web-assets\tpl\app_header.php on line 17
+[28-Apr-2018 19:03:11 Europe/Berlin] PHP Notice:  Undefined variable: page_title in C:\xampp\htdocs\web-assets\tpl\app_header.php on line 17

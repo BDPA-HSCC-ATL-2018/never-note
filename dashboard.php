@@ -7,7 +7,7 @@ $user_id = $_SESSION['user_id'];
 
 <!--TODO Create controller for search.-->
 
-<form action="index.html" method="post">
+<form action="index.php?function=createaccount" method="post">
   <div class="row">
     <div class="col-md-9">
       <input type="text" name="search" placeholder="Search" class="form-control">
@@ -24,7 +24,7 @@ $user_id = $_SESSION['user_id'];
 <br>
 
 <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
-  <li class="nav-item">
+  <li class="nav-item"> 
     <a class="nav-link active" data-toggle="tab" href="#home">Notes</a>
   </li>
   <li class="nav-item">
