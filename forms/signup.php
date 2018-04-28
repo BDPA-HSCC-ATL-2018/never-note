@@ -8,7 +8,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/never-note/tpl/app_nav.php';
 ?>
 <html>
 <header>
-	<!-- Handles rendering prefs for mobile devices -->
+	<!-- Handles rendering prefs for mobile devices --> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Signup | NeverNote</title>
 </header>

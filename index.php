@@ -7,7 +7,7 @@
     switch ($function) {
       case 'createnote':
         create_note($conn);
-        break;
+        break; 
 
       case 'createaccount':
         create_account($conn);

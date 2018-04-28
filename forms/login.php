@@ -27,7 +27,7 @@ if (password_verify("hash", '$2y$10$t3QqJcppy62o3WJDAEzcbOBuecRfAdAx.sNCUk1jrEMZ
               <div class="col-md-4">
                 <input type="email" class="form-control" id="email" name="email" placeholder="Email" required/>
                 <div class="invalid-feedback">Dude, you need a First Name </div>
-              </div>
+              </div> 
             </div>
 
             <div class="mx-auto">

@@ -1,7 +1,7 @@
 <?php
   include_once $_SERVER['DOCUMENT_ROOT'] . '/never-note/lib/db.php';
   session_start();
-?>
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
