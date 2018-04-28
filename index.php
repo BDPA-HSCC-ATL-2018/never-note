@@ -50,10 +50,10 @@ SQL;
   }
 
   function create_account($conn) {
-    $fname_for_sql = $_REQUEST['first-name'];
-    $lname_for_sql = $_REQUEST['last-name'];
-    $email_for_sql = $_REQUEST['email'];
-    $loginpw_for_sql = password_hash($_POST['loginpw'], PASSWORD_DEFAULT);
+    $fname_for_sql = $_REQUEST['first_name'];
+    $lname_for_sql = $_REQUEST['last_name'];
+    $email_for_sql = $_REQUEST['email_id'];
+    $loginpw_for_sql = password_hash($_POST['login_pw'], PASSWORD_DEFAULT);
     $sql = <<<SQL
       INSERT INTO user (first_name, last_name, email_id, login_pw)
       VALUES ("$fname_for_sql", "$lname_for_sql", "$email_for_sql", "$loginpw_for_sql");

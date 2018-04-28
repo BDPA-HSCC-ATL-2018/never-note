@@ -1,5 +1,5 @@
 <?php
-  include_once $_SERVER['DOCUMENT_ROOT'] . '/note_app/lib/db.php';
+  include_once $_SERVER['DOCUMENT_ROOT'] . '/never-note/lib/db.php';
   session_start();
 ?>
 
