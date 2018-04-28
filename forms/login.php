@@ -1,7 +1,7 @@
 <?php
 $page_title = "Login";
-include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app-header.php";
-include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app-nav.php";
+include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app_header.php";
+include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app_nav.php";
 
 if (password_verify("hash", '$2y$10$t3QqJcppy62o3WJDAEzcbOBuecRfAdAx.sNCUk1jrEMZfcArhoB3e')) {
   echo "Passwords are the same.";
