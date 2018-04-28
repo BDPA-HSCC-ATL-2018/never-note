@@ -1,7 +1,7 @@
 <?php
 $page_title = "Dashboard";
-include_once $_SERVER['DOCUMENT_ROOT'] . "/noteapp/tpl/app-header.php";
-include_once $_SERVER['DOCUMENT_ROOT'] . "/noteapp/tpl/app-nav.php";
+include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app-header.php";
+include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app-nav.php";
 $user_id = $_SESSION['user_id'];
 ?>
 
