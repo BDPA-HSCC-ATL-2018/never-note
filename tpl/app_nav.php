@@ -3,13 +3,11 @@
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
-<<<<<<< HEAD
-<button>
 
-</button>
-=======
-</form> 
->>>>>>> d8d0691242c9fdb054e9bd358b7969e34c007ba7
+<a class="btn btn-outline-secondary" href="../index.php?logout">Logout</a>
+
+</form>
+
 </nav>
 <br/>
 <div class="container-fluid">

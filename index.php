@@ -7,7 +7,7 @@
     switch ($function) {
       case 'createnote':
         create_note($conn);
-        break; 
+        break;
 
       case 'createaccount':
         create_account($conn);
@@ -15,6 +15,10 @@
 
       case 'login':
         login($conn);
+        break;
+
+      case 'logout':
+        logout($conn);
         break;
 
       default:
@@ -96,5 +100,11 @@ SQL;
     } else {
       echo "The SQL didn't work.";
     }
+  }
+
+  function logout($conn) {
+    session_destroy();
+    session_unset();
+    header("Location: forms/login.php");
   }
 ?>

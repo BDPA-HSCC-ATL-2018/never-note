@@ -24,7 +24,7 @@ $user_id = $_SESSION['user_id'];
 <br>
 
 <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
-  <li class="nav-item"> 
+  <li class="nav-item">
     <a class="nav-link active" data-toggle="tab" href="#home">Notes</a>
   </li>
   <li class="nav-item">
@@ -88,4 +88,4 @@ SQL;
   })
 </script>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/noteapp/tpl/app_footer.php";?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app_footer.php";?>
