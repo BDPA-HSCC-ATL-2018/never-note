@@ -36,7 +36,7 @@ SQL;
   if ($note_result && $cat_result) {
     header("Location:dashboard.php");
   } else  {
-    echo "The record was not saved to the database." . $conn->error;
+    echo "The record wasn't saved to the database." . $conn->error;
   }
   }
 ?>
