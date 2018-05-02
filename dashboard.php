@@ -6,23 +6,33 @@ $user_id = $_SESSION['user_id'];
 ?>
 
 <!--TODO Create controller for search.-->
+<div class="container-fluid p-5">
+	<div class="jumbotron">
+		<h1 class="display-4"><p class="text-secondary">Nevernote</p></h1>
+		<div class="card mx-auto">
 
-<form action="index.php?function=createaccount" method="post">
+<div class="card-header">
+          <center><h3 class="card-title p-4 pb-5"><?php echo $page_title?></h3></center>
+<form id="search" action="index.php?function=createaccount" method="post">
   <div class="row">
-    <div class="col-md-9">
+    <div class="input-group col-md-10">
       <input type="text" name="search" placeholder="Search" class="form-control">
+<span class="input-group-btn"><button form="search" type="submit" class="btn btn-default">Search</button>
+</span>
     </div>
-    <div class="col-md-1">
-      <input type="submit" class="btn btn-outline-primary">
+
+
+
+<div class="col-md-2">
+
+      <button href="forms/newnote.php" class="btn btn-light text-secondary">New Note</button>
     </div>
-    <div class="col-md-2">
-      <a href="forms/newnote.php" class="btn btn-outline-primary">Create New Note</a>
-    </div>
+  </div>
   </div>
 </form>
 
 <br>
-
+      <div class="card-body">
 <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
   <li class="nav-item">
     <a class="nav-link active" data-toggle="tab" href="#home">Notes</a>
@@ -88,4 +98,9 @@ SQL;
   })
 </script>
 
+</div>
+</div>
+</div>
+</div>
+</div>
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app_footer.php";?>
