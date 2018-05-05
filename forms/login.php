@@ -2,15 +2,9 @@
 $page_title = "Login";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app_header.php";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app_nav.php";
-
-if (password_verify("hash", '$2y$10$t3QqJcppy62o3WJDAEzcbOBuecRfAdAx.sNCUk1jrEMZfcArhoB3e')) {
-  echo "Passwords are the same.";
-} else {
-  echo "Passwords are not the same.";
-}
 ?>
 <div class="jumbotron">
-  <h1 class="display-4">Nevernote</h1>
+  <h1 class="display-4"><p class="text-secondary">Nevernote</p></h1>
 
 <center>
   <div class="row">
@@ -19,7 +13,7 @@ if (password_verify("hash", '$2y$10$t3QqJcppy62o3WJDAEzcbOBuecRfAdAx.sNCUk1jrEMZ
       <div class="card mb-10">
 
         <div class="card-body">
-          <h3 class="card-title">Login</h3>
+          <h3 class="card-title p-3">Login</h3>
           <p class="card-text">
             <form action="../index.php?function=login" method="post">
             <div class="mx-auto">
@@ -27,7 +21,7 @@ if (password_verify("hash", '$2y$10$t3QqJcppy62o3WJDAEzcbOBuecRfAdAx.sNCUk1jrEMZ
               <div class="col-md-4">
                 <input type="email" class="form-control" id="email" name="email" placeholder="Email" required/>
                 <div class="invalid-feedback">Dude, you need a First Name </div>
-              </div> 
+              </div>
             </div>
 
             <div class="mx-auto">
@@ -37,13 +31,14 @@ if (password_verify("hash", '$2y$10$t3QqJcppy62o3WJDAEzcbOBuecRfAdAx.sNCUk1jrEMZ
               </div>
             </div>
             <br>
-            <input type="submit" class="btn btn-primary">
+            <input type="submit" class="btn btn-light">
           </form>
-            <a href="../index.php" class="btn btn-dark">Don't have an account? Sign Up</a>
+
           </div>
 
       </p>
     </div>
+    <div class="card-footer"><a href="../index.php" class="card-text py-1 text-muted">Don't have an account? Sign Up</a></div>
   </div>
 </center>
 </div>

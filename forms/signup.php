@@ -8,14 +8,14 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/never-note/tpl/app_nav.php';
 ?>
 <html>
 <header>
-	<!-- Handles rendering prefs for mobile devices --> 
+	<!-- Handles rendering prefs for mobile devices -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Signup | NeverNote</title>
 </header>
 
 <div class="container-fluid p-5">
 	<div class="jumbotron">
-		<h1 class="display-4"> Nevernote</h1>
+		<h1 class="display-4"> <p class="text-secondary">Nevernote</p></h1>
 		<div class="card mx-auto">
 			<!-- Left blank for a purpose -3- -->
 			<form action="../index.php" method="post" class="needs-validation" novalidate>

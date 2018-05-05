@@ -6,8 +6,8 @@
 
     switch ($function) {
       case 'createnote':
-        create_note($conn);
-        break; 
+        create_note($conn, $_SESSION['user_id']);
+        break;
 
       case 'createaccount':
         create_account($conn);
@@ -15,6 +15,10 @@
 
       case 'login':
         login($conn);
+        break;
+
+      case 'logout':
+        logout($conn);
         break;
 
       default:
@@ -25,13 +29,13 @@
     header("Location: forms/signup.php"); //Redirect to signup.php if there was no request provided.
   }
 
-  function create_note($conn) {
+  function create_note($conn, $user_id) {
     $note_title = $_REQUEST['note-title'];
     $note = $_REQUEST['note'];
     $category_name = $_REQUEST['category'];
     $note_sql = <<<SQL
     INSERT INTO notes (user_id, category_id, note_title, note_content)
-    VALUES (1, 1, "$note_title", "$note");
+    VALUES ($user_id, 1, "$note_title", "$note");
 SQL;
 
     $cat_sql = <<<SQL
@@ -84,7 +88,6 @@ SQL;
 
         if (password_verify($login_pw, $hashed_password)) {
           $_SESSION['user_id'] = $row['user_id'];
-          $_SESSION['test'] = 1;
           header("Location: dashboard.php");
         } else {
           header("Location: forms/login.php");
@@ -96,5 +99,11 @@ SQL;
     } else {
       echo "The SQL didn't work.";
     }
+  }
+
+  function logout($conn) {
+    session_destroy();
+    session_unset();
+    header("Location: forms/login.php");
   }
 ?>
