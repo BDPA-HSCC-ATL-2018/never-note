@@ -18,7 +18,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/never-note/tpl/app_nav.php';
 		<h1 class="display-4"> <p class="text-secondary">Nevernote</p></h1>
 		<div class="card mx-auto">
 			<!-- Left blank for a purpose -3- -->
-			<form action="../index.php" method="post" class="needs-validation" novalidate>
+			<form action="../index.php?function=createaccount" method="post" class="needs-validation" novalidate>
 				<center>
 					<!-- Styles first and last name fields as an input group -->
 					<div class="card-body">

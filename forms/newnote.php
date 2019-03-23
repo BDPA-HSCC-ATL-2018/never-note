@@ -1,7 +1,7 @@
 <?php
 $page_title= "New note";
-include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app-header.php";
-include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app-nav.php";
+include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app_header.php";
+include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app_nav.php";
 ?>
 
 <form action="../index.php?function=createnote" method="post">
@@ -20,4 +20,4 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app-nav.php";
 </div>
 </form>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/noteapp/tpl/app-footer.php"; ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/noteapp/tpl/app_footer.php"; ?>

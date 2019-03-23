@@ -66,6 +66,16 @@ SQL;
     $result = $conn->query($sql);
 
     if ($result) {
+		//Get the user_id from the database.
+		$user_id_sql = <<<SQL
+			SELECT user_id FROM user WHERE email_id="$email_for_sql" LIMIT 1;
+SQL;
+
+		$user_id_result = $conn->query($user_id_sql);
+
+		$user_id_row = $user_id_result->fetch_assoc();
+    	
+    	$_SESSION['user_id'] = $user_id_row['user_id'];
       header("Location: dashboard.php");
     } else {
       echo "The account was not created.";
@@ -93,7 +103,8 @@ SQL;
           header("Location: forms/login.php");
         }
       } catch (Exception $e) {
-        header("Location: forms/signup.php");
+      	echo $e->getMessage();
+        //header("Location: forms/signup.php");
       }
 
     } else {

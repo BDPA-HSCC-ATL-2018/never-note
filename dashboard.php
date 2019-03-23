@@ -25,7 +25,7 @@ $user_id = $_SESSION['user_id'];
 
 <div class="col-md-2">
 
-      <button href="forms/newnote.php" class="btn btn-light text-secondary">New Note</button>
+      <a href="forms/newnote.php" class="btn btn-light text-secondary">New Note</a>
     </div>
   </div>
   </div>
