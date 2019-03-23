@@ -4,7 +4,7 @@
 <span class="navbar-toggler-icon"></span>
 </button>
 
-<a class="btn btn-outline-dark text-white" href="index.php?logout">Logout</a>
+<a class="btn btn-outline-dark text-white" href="index.php?function=logout">Logout</a>
 
 </form>
 
