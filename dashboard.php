@@ -3,6 +3,11 @@ $page_title = "Dashboard";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app_header.php";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app_nav.php";
 $user_id = $_SESSION['user_id'];
+
+//Redirect to sign up if the user is not logged in.
+if (!isset($user_id)) {
+	header("Location: forms/signup.php");
+}
 ?>
 
 <!--TODO Create controller for search.-->
