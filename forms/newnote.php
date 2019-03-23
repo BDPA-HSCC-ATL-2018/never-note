@@ -20,4 +20,4 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app_nav.php";
 </div>
 </form>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/noteapp/tpl/app_footer.php"; ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/never-note/tpl/app_footer.php"; ?>
