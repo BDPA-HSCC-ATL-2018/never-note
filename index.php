@@ -30,6 +30,7 @@
   }
 
   function create_note($conn, $user_id) {
+    $user_id = $_SESSION['user_id'];
     $note_title = $_REQUEST['note-title'];
     $note = $_REQUEST['note'];
     $category_name = $_REQUEST['category'];
@@ -40,7 +41,7 @@ SQL;
 
     $cat_sql = <<<SQL
     INSERT INTO categories (user_id, category_name)
-    VALUES (1, "$category_name");
+    VALUES ($user_id, "$category_name");
 SQL;
 
     $note_result = $conn->query($note_sql);
@@ -74,7 +75,7 @@ SQL;
 		$user_id_result = $conn->query($user_id_sql);
 
 		$user_id_row = $user_id_result->fetch_assoc();
-    	
+
     	$_SESSION['user_id'] = $user_id_row['user_id'];
       header("Location: dashboard.php");
     } else {
