@@ -4,7 +4,14 @@
 <span class="navbar-toggler-icon"></span>
 </button>
 
-<a class="btn btn-outline-dark text-white" href="index.php?function=logout">Logout</a>
+<?php
+//If the user_id is set (if the user has logged in), show the logout button.
+if (isset($_SESSION['user_id'])) {
+	echo <<<HTML
+		<a class="btn btn-outline-dark text-white" href="index.php?function=logout">Logout</a>
+HTML;
+}
+?>
 
 </form>
 
